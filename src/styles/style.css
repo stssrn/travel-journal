@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'ITC Cheltenham Std';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ITC Cheltenham Std Book'), url('/public/fonts/CheltenhamStdBook.woff') format('woff');
+    }
+
+@font-face {
+    font-family: 'ITC Cheltenham Std';
+    font-style: normal;
+    font-weight: bold;
+    src: local('ITC Cheltenham Std Bold'), url('/public/fonts/CheltenhamStdBold.woff') format('woff');
+    }
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/public/fonts/inter.woff') format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+body {
+    font-family: 'ITC Cheltenham Std', sans-serif;
+    margin: 0;
+    background-color: #EBEBEB;
+}
+
+header {
+    background-color: #941751;
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+    box-sizing: border-box;
+    color: #FFF;
+    margin-bottom: 32px;
+    text-transform: lowercase;
+    font-family: 'Inter', serif;
+    font-weight: 500;
+}
+
+header img {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+main {
+    width: 800px;
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+main h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    margin: 32px auto;
+    text-align: center;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.entry {
+    height: max-content;
+    display: flex;
+    flex: row;
+    gap: 32px;
+    max-width: 100%;
+    padding-bottom: 32px;
+    margin-top: 32px;
+}
+
+#visited .entry, #bucket-list .entry:not(:last-child) {
+    border-bottom: 1px solid #D6D6D6;
+}
+
+.entry__image {
+    object-fit: cover;
+    width: 200px;
+    height: 100%;
+    border-radius: 16px;
+}
+
+.entry__location {
+    margin-top: 32px;
+}
+
+.entry__location img {
+    margin-right: 4px;
+    height: 14px;
+    vertical-align: -7%;
+}
+
+.entry__location__name {
+    letter-spacing: .17em;
+    margin-right: 16px;
+    text-transform: uppercase;
+}
+
+.entry__location__maps-url {
+    color: #A99AA9;
+}
+
+.entry__title {
+    font-size: 40px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.entry__date {
+    font-weight: bold;
+}
+
+.entry__description {
+    line-height: 150%;
+}
+
+footer {
+    width: 100%;
+    color: #FFF;
+    background-color: #000;
+    padding: 24px;
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+    .entry {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .entry__image {
+        width: 100%;
+        height: 240px;
+    }
+}
